@@ -1,0 +1,40 @@
+<html>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(document).ready(function(){
+	    
+	    $(".question").click(function () {
+	    var divname= this.value;
+	      $("#"+divname).show().siblings().hide();
+	    });
+	
+	  });
+</script> 
+
+<body>
+
+<p>Select a question to see the answer.</p>
+
+<div id="questionArea" class="questionArea">
+
+ Question 1 <input type="radio" id="question1" class="question" name="radioGroup1" value="answer1" />
+
+ Question 2 <input type="radio" id="question2" class="question" name="radioGroup1" value="answer2" />
+
+ Question 3 <input type="radio" id="question3" class="question" name="radioGroup1" value="answer3" />
+
+</div>
+
+<div id="answerArea" class="answerArea">
+	
+	<div id="answer1" style="display: none" class="answer">First Answer</div>
+
+	<div id="answer2" style="display: none" class="answer">Second Answer</div>
+
+	<div id="answer3" style="display: none" class="answer">Third Answer</div>
+
+</div>
+
+</body>
+
+</html>

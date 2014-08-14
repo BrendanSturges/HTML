@@ -1,0 +1,46 @@
+<html>
+<body>
+
+<p>Select a question to see the answer.</p>
+
+<div id="questionArea" class="questionArea">
+
+ Question 1 <input type="radio" id="question1" class="question" name="radioGroup1" onclick="toggle('answer1')"/>
+
+ Question 2 <input type="radio" id="question2" class="question" name="radioGroup1" onclick="toggle('answer2')"/>
+
+ Question 3 <input type="radio" id="question3" class="question" name="radioGroup1" onclick="toggle('answer3')"/>
+
+</div>
+
+<div id="answerArea" class="answerArea">
+
+	<div id="answer1" style="display: none" class="answer">First Answer</div>
+
+	<div id="answer2" style="display: none" class="answer">Second Answer</div>
+
+	<div id="answer3" style="display: none" class="answer">Third Answer</div>
+
+</div>
+
+
+
+
+<script type="text/javascript">
+function toggle(id){
+        if (document.getElementById) {
+          var divid = document.getElementById(id);
+          var divs = document.getElementsByClassName("answer");
+          for(var i=0;i<divs.length;i++) {
+            divs[i].style.display = "none";
+          }
+          divid.style.display = "block";
+        } 
+        return false;
+ }
+ 
+</script>
+
+</body>
+
+</html>
